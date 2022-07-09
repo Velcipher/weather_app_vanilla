@@ -160,7 +160,7 @@ input {
 .location {
     background: rgb(90, 150, 198);
     margin-left: 360px;
-    margin-top: 16px;
+    margin-top: 5px;
     width: 311px;
     height: 30px;
     transition: all 200ms ease;
@@ -170,6 +170,11 @@ input {
 .location:hover {
     background: rgb(68, 65, 65)00;
     color: aqua;
+}
+
+.gitHub {
+    margin-left: 500px;
+    margin-top: 20px;
 }
 
 .container {
