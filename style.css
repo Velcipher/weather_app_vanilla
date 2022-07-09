@@ -1,0 +1,217 @@
+hr {
+    margin: 5px;
+}
+
+input {
+    width: 286px;
+}
+
+.main {
+    min-width: 1170px;
+    height: auto;
+}
+
+.main .container-fluid {
+    min-width: 600px;
+    position: relative;
+    display: block;
+    padding: 0;
+    border: 3px solid #000;
+    width: 871px;
+    height: 542px;
+    margin-left: 0px;
+    margin-right: 0;
+    background: rgba(134, 225, 233, 0.989);
+
+
+}
+
+.currentInfo {
+    min-width: 300px;
+    width: 310px;
+    height: 402px;
+    border: 3px solid rgb(90, 150, 198);
+    margin-left: 361px;
+    margin-top: -458px;
+    transition: all 200ms ease;
+}
+
+.currentInfo:hover {
+    background: rgb(68, 65, 65);
+    color: aqua;
+    box-shadow: 0px 2px 7px 3px #2b2b2b;
+}
+
+.currentInfo img {
+    width: 300px;
+    margin: 3px;
+}
+
+.date {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.temperature {
+    font-size: 35px;
+    font-weight: 900;
+    text-align: center;
+    transition: all 200ms ease;
+    margin-top: 10px;
+}
+
+.open {
+    color: rgb(73, 50, 164);
+}
+
+#celsium:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+#faringate {
+    transition: all 200ms ease;
+
+}
+
+#faringate:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.curWeather {
+    display: block;
+    min-width: none;
+    position: relative;
+    width: 30%;
+    height: 530px;
+    margin-top: -69px;
+
+}
+
+.curW {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 300px;
+    height: 523px;
+    border: 2px solid #000;
+    text-align: justify;
+    padding: 10px;
+    font-size: 30px;
+    transition: all 200ms ease;
+    box-shadow: 2px 2px 7px 3px #2b2b2b;
+    background: rgb(178, 203, 223);
+}
+
+.curW:hover {
+    background: rgb(68, 65, 65);
+    color: aqua;
+}
+
+.town {
+    text-align: center;
+}
+
+.curW2 {
+    font-size: 20px;
+    margin-top: 37px;
+    margin-bottom: 20px;
+}
+
+.details {
+    font-size: 20px;
+    list-style: none;
+}
+
+.form {
+    width: 381px;
+    background: rgb(90, 150, 198);
+    font-weight: 500;
+    border: none;
+    font-size: 1.7rem;
+    padding: 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+    transition: all 200ms ease;
+    margin-left: 327px;
+}
+
+.search {
+    width: 360px;
+    text-align: center;
+    display: block;
+    margin: 0;
+    box-shadow: 0px 2px 7px 3px #2b2b2b;
+}
+
+.form:hover {
+    background: rgb(68, 65, 65);
+    color: aqua;
+}
+
+.btn-control {
+    width: 52px;
+
+
+}
+
+.location {
+    background: rgb(90, 150, 198);
+    margin-left: 360px;
+    margin-top: 16px;
+    width: 311px;
+    height: 30px;
+    transition: all 200ms ease;
+    font-weight: 500;
+}
+
+.location:hover {
+    background: rgb(68, 65, 65)00;
+    color: aqua;
+}
+
+.container {
+    background: rgba(134, 225, 233, 0);
+    margin-right: 0;
+    width: 160px;
+    margin-top: -532px;
+    z-index: 101;
+}
+
+.card {
+    margin: 0 auto;
+    background: rgb(178, 203, 223);
+    transition: all 200ms ease;
+    box-shadow: 3px 2px 7px 1px #2b2b2b;
+
+}
+
+.card:hover {
+    background: rgb(68, 65, 65)00;
+    color: aqua;
+}
+
+.weather {
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 15px;
+    padding: 3px;
+    margin-bottom: 0;
+}
+
+.card-body {
+    padding: 3px;
+}
+
+.card-text {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}
