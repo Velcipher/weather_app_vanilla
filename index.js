@@ -133,7 +133,7 @@ const toHtml = day =>
           width="42"
         />
             <div class="card-body">
-              <p class="card-text">${Math.round(day[2])}°C / ${Math.round(day[1])}°C</p>
+              <p class="card-text"><strong>${Math.round(day[2])}°C</strong> / ${Math.round(day[1])}°C</p>
             </div>
           </div>`
   
