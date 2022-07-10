@@ -2,7 +2,7 @@ const faringate = document.querySelector('#faringate')
 const celsium = document.querySelector('#celsium')
 
 
- function convertF () {
+function convertF () {
 let temp = document.querySelector('.temp')
 temp.innerHTML = Math.round((+temp.textContent * 9) / 5 + 32)
 faringate.classList.add('open')
@@ -41,31 +41,29 @@ function weather (response){
   celsium.classList.add('open')
   faringate.classList.remove('open')
   faringate.addEventListener('click', convertF)
- currentTemp = response.data.main.temp
- let town = document.querySelector('.town')
- town.innerHTML = response.data.name
- let description = document.querySelector('.curW2')
- description.innerHTML =  `Description : ${response.data.weather[0].description}`
- document.querySelector('#maxT').innerHTML = `Max temperature is ${Math.round(response.data.main.temp_max)}°C`
- document.querySelector('#minT').innerHTML = `Min temperature is ${Math.round(response.data.main.temp_min)}°C`
+  currentTemp = response.data.main.temp
+  let town = document.querySelector('.town')
+  town.innerHTML = response.data.name
+  let description = document.querySelector('.curW2')
+  description.innerHTML =  `Description : ${response.data.weather[0].description}`
+  document.querySelector('#maxT').innerHTML = `Max temperature is ${Math.round(response.data.main.temp_max)}°C`
+  document.querySelector('#minT').innerHTML = `Min temperature is ${Math.round(response.data.main.temp_min)}°C`
   document.querySelector('#humidity').innerHTML = `Humidity is ${Math.round(response.data.main.humidity)}%` 
-   document.querySelector('#pressure').innerHTML = `Pressure is ${Math.round(response.data.main.pressure)} hPa` 
-    document.querySelector('#windSpeed').innerHTML = `Wind speed is ${Math.round(response.data.wind.speed)} m/s` 
-    document.querySelector('#visibility').innerHTML = `Visibility is ${Math.round(response.data.visibility)} m` 
+  document.querySelector('#pressure').innerHTML = `Pressure is ${Math.round(response.data.main.pressure)} hPa` 
+  document.querySelector('#windSpeed').innerHTML = `Wind speed is ${Math.round(response.data.wind.speed)} m/s` 
+  document.querySelector('#visibility').innerHTML = `Visibility is ${Math.round(response.data.visibility)} m` 
 
-    temp.innerHTML = Math.round(+currentTemp)
-let lat = (response.data.coord.lat)
-let lon =(response.data.coord.lon)
+  temp.innerHTML = Math.round(+currentTemp)
+  let lat = (response.data.coord.lat)
+  let lon =(response.data.coord.lon)
 
-forecast (lat, lon)
+  forecast (lat, lon)
 }
 
+let form = document.querySelector("form");
+form.addEventListener("submit", searchCity);
 
-
-  let form = document.querySelector("form");
- form.addEventListener("submit", searchCity);
-
- let now = new Date();
+let now = new Date();
 let week = [
       "Sunday",
       "Monday",
@@ -88,14 +86,14 @@ if (timeM < 10) {
 
 
 function showPosition(position){
-  let lat = position.coords.latitude
+let lat = position.coords.latitude
 let lon = position.coords.longitude
 let units = 'metric'
 
 
 let apiKey = '982b4bc2871092f28978e82b0cbd7c0a'
- let apiUrl =`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(weather);
+let apiUrl =`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+axios.get(apiUrl).then(weather);
 
 
 } 
@@ -103,17 +101,11 @@ function navi() {navigator.geolocation.getCurrentPosition(showPosition)}
 document.querySelector(".location").addEventListener('click', navi)
 
 
-
-
-
-
-
-
 function displayForecast(response) {  
    
 var day_of_week = new Date().getDay();
 var dayList = ["Sunday", "Monday", "Tuesday", "Wednesday", 'Thursday', "Friday", "Saturday"]
-  var sorted_list = dayList.slice(day_of_week + 1).concat(dayList.slice(0,day_of_week));
+var sorted_list = dayList.slice(day_of_week + 1).concat(dayList.slice(0,day_of_week));
 days = []
 days[0] = [sorted_list[0], response.data.daily[1].temp.min, response.data.daily[1].temp.max, response.data.daily[1].weather[0].icon]
 days[1] = [sorted_list[1], response.data.daily[2].temp.min, response.data.daily[2].temp.max, response.data.daily[2].weather[0].icon]
@@ -145,24 +137,23 @@ render()
  }
 
 function forecast (lat, lon) {
-   let town = document.querySelector('.town')
+  let town = document.querySelector('.town')
   
-let apiKey = '982b4bc2871092f28978e82b0cbd7c0a'
-let units = 'metric'
- let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
-axios.get(apiUrl).then(displayForecast) 
-console.log(town)
+  let apiKey = '982b4bc2871092f28978e82b0cbd7c0a'
+  let units = 'metric'
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast) 
+  console.log(town)
  
 }
  
-
-
 function f () {
-   let town = document.querySelector('.town')
+  let town = document.querySelector('.town')
   
   
-let apiKey = '982b4bc2871092f28978e82b0cbd7c0a'
-let unit = 'metric'
- let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Kyiv&units=${unit}&appid=${apiKey}`
-axios.get(apiUrl).then(weather) 
-} f()
+  let apiKey = '982b4bc2871092f28978e82b0cbd7c0a'
+  let unit = 'metric'
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Kyiv&units=${unit}&appid=${apiKey}`
+   axios.get(apiUrl).then(weather) 
+} 
+f()
