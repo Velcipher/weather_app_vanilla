@@ -115,11 +115,11 @@ var day_of_week = new Date().getDay();
 var dayList = ["Sunday", "Monday", "Tuesday", "Wednesday", 'Thursday', "Friday", "Saturday"]
   var sorted_list = dayList.slice(day_of_week + 1).concat(dayList.slice(0,day_of_week));
 days = []
-days[0] = [sorted_list[1], response.data.daily[1].temp.min, response.data.daily[1].temp.max, response.data.daily[1].weather[0].icon]
-days[1] = [sorted_list[2], response.data.daily[2].temp.min, response.data.daily[2].temp.max, response.data.daily[2].weather[0].icon]
-days[2] = [sorted_list[3], response.data.daily[3].temp.min, response.data.daily[3].temp.max, response.data.daily[3].weather[0].icon]
-days[3] = [sorted_list[4], response.data.daily[4].temp.min, response.data.daily[4].temp.max, response.data.daily[4].weather[0].icon]
-days[4] = [sorted_list[5], response.data.daily[5].temp.min, response.data.daily[5].temp.max, response.data.daily[5].weather[0].icon]
+days[0] = [sorted_list[0], response.data.daily[1].temp.min, response.data.daily[1].temp.max, response.data.daily[1].weather[0].icon]
+days[1] = [sorted_list[1], response.data.daily[2].temp.min, response.data.daily[2].temp.max, response.data.daily[2].weather[0].icon]
+days[2] = [sorted_list[2], response.data.daily[3].temp.min, response.data.daily[3].temp.max, response.data.daily[3].weather[0].icon]
+days[3] = [sorted_list[3], response.data.daily[4].temp.min, response.data.daily[4].temp.max, response.data.daily[4].weather[0].icon]
+days[4] = [sorted_list[4], response.data.daily[5].temp.min, response.data.daily[5].temp.max, response.data.daily[5].weather[0].icon]
 
   
 const toHtml = day =>
