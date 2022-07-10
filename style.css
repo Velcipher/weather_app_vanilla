@@ -160,7 +160,7 @@ input {
 .location {
     background: rgb(90, 150, 198);
     margin-left: 360px;
-    margin-top: 5px;
+    margin-top: 15px;
     width: 311px;
     height: 30px;
     transition: all 200ms ease;
@@ -173,7 +173,7 @@ input {
 }
 
 .gitHub {
-    margin-left: 500px;
+    margin-left: 0px;
     margin-top: 20px;
 }
 
