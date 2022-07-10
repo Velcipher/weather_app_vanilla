@@ -193,15 +193,15 @@ input {
 
 }
 
+.weatherIcon {
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+}
+
 .card:hover {
     background: rgb(68, 65, 65)00;
     color: aqua;
-}
-
-.weather {
-    width: 50px;
-    display: block;
-    margin: 0 auto;
 }
 
 .card-title {
