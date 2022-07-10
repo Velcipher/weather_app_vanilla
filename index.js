@@ -124,7 +124,7 @@ days[4] = [sorted_list[4], response.data.daily[5].temp.min, response.data.daily[
   
 const toHtml = day =>
     ` <div class="card" style="width: 8rem">
-            <h5 class="card-title">${day[0]}</h5>
+            <h5 class="card-title"><strong>${day[0]}</strong></h5>
             <img class="weatherIcon"
           src="http://openweathermap.org/img/wn/${
             day[3]
